@@ -115,13 +115,11 @@ function checkLevelCompletion() {
 }
 
 function clickCell(cell) {
-  //Check if the end-user clicked on a mine
   if (cell.getAttribute("data-mine")=="true") {
     revealMines();
     alert("Game Over");
   } else {
     cell.className="clicked";
-    //Count and display the number of adjacent mines
     var mineCount=0;
     var cellRow = cell.parentNode.rowIndex;
     var cellCol = cell.cellIndex;
