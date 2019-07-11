@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <link rel="icon" href="mine.png">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -110,7 +111,14 @@ function checkLevelCompletion() {
       }
   }
   if (levelComplete) {
-    alert("You Win!");
+
+
+Swal.fire(
+  'Good job!',
+  'You Won!',
+  'success'
+)
+
     revealMines();
   }
 }
@@ -118,7 +126,13 @@ function checkLevelCompletion() {
 function clickCell(cell) {
   if (cell.getAttribute("data-mine")=="true") {
     revealMines();
-    alert("Game Over");
+Swal.fire({
+  type: 'error',
+  title: 'Oops...',
+  text: 'You Lose!',
+})
+
+
   } else {
     cell.className="clicked";
     var mineCount=0;
