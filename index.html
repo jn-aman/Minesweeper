@@ -1,5 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">BODY {margin-top: 10%;
+  background: black;
+  color: white;
+  font-family: courier new;
+  text-align: center;
+}
+
+H1 {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: normal;
+}
+#grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grid TR TD{
+  border:1px solid white;
+  background: #999999;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+}
+
+#grid TR TD.clicked {
+    background: #333333;
+}
+
+#grid TR TD.mine {
+    background: #FF0000;
+}
+
+button {
+  margin: 12px;
+}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper</title>
+  
+  
+  
+
+  
+</head>
+
+<body>
+
+  <H1>Minesweeper</H1>
+<table id=grid>
+</table>
+<button onclick="generateGrid();">RESET GAME</button>
+  
+</body>
 <script type="text/javascript">
 	var grid = document.getElementById("grid");
 var testMode = false; // set true to make mines visible
@@ -86,63 +145,4 @@ function clickCell(cell) {
   }
 }
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style type="text/css">BODY {margin-top: 10%;
-  background: black;
-  color: white;
-  font-family: courier new;
-  text-align: center;
-}
-
-H1 {
-  text-align: center;
-  font-size: 14pt;
-  font-weight: normal;
-}
-#grid {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#grid TR TD{
-  border:1px solid white;
-  background: #999999;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-}
-
-#grid TR TD.clicked {
-    background: #333333;
-}
-
-#grid TR TD.mine {
-    background: #FF0000;
-}
-
-button {
-  margin: 12px;
-}
-</style>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Minesweeper</title>
-  
-  
-  
-
-  
-</head>
-
-<body>
-
-  <H1>Minesweeper</H1>
-<table id=grid>
-</table>
-<button onclick="generateGrid();">RESET GAME</button>
-  
-</body>
-
 </html>
